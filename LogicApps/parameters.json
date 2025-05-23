@@ -1,0 +1,34 @@
+{
+  "office365-ConnectionRuntimeUrl": {
+    "type": "String",
+    "value": "@appsetting('office365-ConnectionRuntimeUrl')"
+  },
+  "office365-Authentication": {
+    "type": "Object",
+    "value": "@parameters('office365-Authentication')"
+  },
+  "azureFunctionOperation-ResourceGroup": {
+    "type": "String",
+    "value": "@{parameters('azureFunctionOperation-ResourceGroup')}"
+  },
+  "azureFunctionOperation-SiteName": {
+    "type": "String",
+    "value": "@{parameters('azureFunctionOperation-SiteName')}"
+  },
+  "azureFunctionOperation-TriggerUrl": {
+    "type": "String",
+    "value": "@parameters('azureFunctionOperation-TriggerUrl')"
+  },
+  "apiManagementOperation-ResourceGroup": {
+    "type": "String",
+    "value": "@{parameters('apiManagementOperation-ResourceGroup')}"
+  },
+  "apiManagementOperation-ServiceName": {
+    "type": "String",
+    "value": "@{parameters('apiManagementOperation-ServiceName')}"
+  },
+  "apiManagementOperation-BaseUrl": {
+    "type": "String",
+    "value": "@parameters('apiManagementOperation-BaseUrl')"
+  }
+}

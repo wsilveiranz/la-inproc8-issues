@@ -1,0 +1,99 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "contentVersion": "1.0.0.0",
+        "actions": {
+            "List_all_containers": {
+                "type": "ServiceProvider",
+                "inputs": {
+                    "serviceProviderConfiguration": {
+                        "connectionName": "AzureBlob",
+                        "operationId": "listContainers",
+                        "serviceProviderId": "/serviceProviders/AzureBlob"
+                    }
+                },
+                "runAfter": {}
+            },
+            "Get_room_lists_(V2)": {
+                "type": "ApiConnection",
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "referenceName": "office365"
+                        }
+                    },
+                    "method": "get",
+                    "path": "/codeless/beta/me/findRoomLists"
+                },
+                "runAfter": {}
+            },
+            "Execute_C#_script_code": {
+                "type": "CSharpScriptCode",
+                "inputs": {
+                    "CodeFile": "execute_c__script_code.csx"
+                },
+                "runAfter": {}
+            },
+            "Execute_JavaScript_code": {
+                "type": "JavaScriptCode",
+                "inputs": {
+                    "code": "\r\n// Assign the message to a variable\r\nlet message = \"Hello, World!\";\r\n\r\n// Output the message to the console\r\nconsole.log(message);\r\n\r\n// return the message\r\nreturn message"
+                },
+                "runAfter": {}
+            },
+            "Execute_PowerShell_script_code": {
+                "type": "PowershellCode",
+                "inputs": {
+                    "CodeFile": "execute_powershell_script_code.ps1"
+                },
+                "runAfter": {}
+            },
+            "Call_an_Azure_function": {
+                "type": "Function",
+                "inputs": {
+                    "method": "POST",
+                    "function": {
+                        "connectionName": "azureFunctionOperation"
+                    }
+                },
+                "runAfter": {}
+            },
+            "Call_a_local_function_in_this_logic_app": {
+                "type": "InvokeFunction",
+                "inputs": {
+                    "functionName": "Function",
+                    "parameters": {
+                        "zipCode": 9801,
+                        "temperatureScale": "Celsius"
+                    }
+                },
+                "runAfter": {}
+            },
+            "Call_an_Azure_API_Management_API": {
+                "type": "ApiManagement",
+                "inputs": {
+                    "apiManagement": {
+                        "operationId": "retrieve-resource",
+                        "connection": "apiManagementOperation"
+                    },
+                    "method": "get",
+                    "pathTemplate": {
+                        "template": "/resource"
+                    },
+                    "queries": {
+                        "param1": "sample"
+                    }
+                },
+                "runAfter": {}
+            }
+        },
+        "outputs": {},
+        "triggers": {
+            "When_a_HTTP_request_is_received": {
+                "type": "Request",
+                "kind": "Http"
+            }
+        }
+    },
+    "kind": "Stateful"
+}

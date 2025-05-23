@@ -1,0 +1,19 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "APP_KIND": "workflowapp",
+    "ProjectDirectoryPath": "c:\\dev\\la-inproc8-issues\\LogicApps",
+    "WORKFLOWS_TENANT_ID": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+    "WORKFLOWS_SUBSCRIPTION_ID": "80d4fe69-c95b-4dd2-a938-9250f1c8ab03",
+    "WORKFLOWS_RESOURCE_GROUP_NAME": "WSilveira-Sandbox",
+    "WORKFLOWS_LOCATION_NAME": "australiaeast",
+    "WORKFLOWS_MANAGEMENT_BASE_URI": "https://management.azure.com/",
+    "AzureBlob_connectionString": "redacted",
+    "azureFunctionOperation_functionAppKey": "redacted",
+    "apiManagementOperation_SubscriptionKey": "redacted",
+    "office365-connectionKey": "redacted",
+    "office365-ConnectionRuntimeUrl": "https://9d51d1ffc9f77572.00.common.logic-australiaeast.azure-apihub.net/apim/office365/ef078fdae9684aba84a307456ac1cbfa"
+  }
+}

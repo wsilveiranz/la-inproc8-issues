@@ -1,0 +1,38 @@
+{
+  "office365-ConnectionRuntimeUrl": {
+    "type": "String",
+    "value": "https://9d51d1ffc9f77572.00.common.logic-australiaeast.azure-apihub.net/apim/office365/ef078fdae9684aba84a307456ac1cbfa"
+  },
+  "office365-Authentication": {
+    "type": "Object",
+    "value": {
+      "type": "Raw",
+      "scheme": "Key",
+      "parameter": "office365-connectionKey"
+    }
+  },
+  "azureFunctionOperation-ResourceGroup": {
+    "type": "String",
+    "value": "Swechha-Test"
+  },
+  "azureFunctionOperation-SiteName": {
+    "type": "String",
+    "value": "PowershellKuduTest"
+  },
+  "azureFunctionOperation-TriggerUrl": {
+    "type": "String",
+    "value": "https://powershellkudutest.azurewebsites.net/api/httptrigger1"
+  },
+  "apiManagementOperation-ResourceGroup": {
+    "type": "String",
+    "value": "WSilveira-Sandbox"
+  },
+  "apiManagementOperation-ServiceName": {
+    "type": "String",
+    "value": "wsilveira-apim"
+  },
+  "apiManagementOperation-BaseUrl": {
+    "type": "String",
+    "value": "https://wsilveira-apim.azure-api.net/echo"
+  }
+}
